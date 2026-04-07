@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | Chocolate House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">Chocolate House admin panel | Local browser edits</div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Chocolate House home">
+        <span class="brand-mark">CH</span>
+        <span>Chocolate House Admin</span>
+      </a>
+      <nav class="nav-links" aria-label="Admin navigation">
+        <a href="index.html">View shop</a>
+        <a href="checkout.html">Checkout</a>
+      </nav>
+      <button class="cart-button" type="button" id="reset-preview">Reset preview</button>
+    </header>
+
+    <main class="admin-page">
+      <section class="admin-heading">
+        <p class="eyebrow">Product manager</p>
+        <h1>Edit your chocolate products.</h1>
+        <p>
+          Save product changes directly when this panel is opened through the local server. Export
+          remains available as a backup.
+        </p>
+        <p class="admin-mode" id="admin-mode">Checking admin mode...</p>
+      </section>
+
+      <section class="admin-toolbar">
+        <label>
+          Search products
+          <input type="search" id="admin-search" placeholder="Search product name or category" />
+        </label>
+        <div class="admin-actions">
+          <button class="button primary" type="button" id="add-product">Add product</button>
+          <button class="button secondary dark-secondary" type="button" id="save-preview">Save products</button>
+          <button class="button secondary dark-secondary" type="button" id="export-products">Export products.js</button>
+        </div>
+      </section>
+
+      <section class="admin-settings">
+        <article>
+          <p class="eyebrow">Business settings</p>
+          <h2>WhatsApp and offer banner</h2>
+          <div class="form-row">
+            <label>
+              WhatsApp number
+              <input id="setting-whatsapp" placeholder="919876543210" />
+            </label>
+            <label>
+              Announcement text
+              <input id="setting-announcement" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Offer label
+              <input id="setting-offer-eyebrow" />
+            </label>
+            <label>
+              Offer title
+              <input id="setting-offer-title" />
+            </label>
+          </div>
+        </article>
+
+        <article>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Delivery areas</p>
+              <h2>Pincodes and fees</h2>
+            </div>
+            <button class="button secondary dark-secondary" type="button" id="add-delivery-area">Add area</button>
+          </div>
+          <div class="delivery-admin-list" id="delivery-admin-list"></div>
+        </article>
+      </section>
+
+      <section class="admin-grid" id="admin-grid" aria-live="polite"></section>
+
+      <section class="admin-orders">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Orders</p>
+            <h2>Recent WhatsApp orders</h2>
+          </div>
+          <button class="button secondary dark-secondary" type="button" id="refresh-orders">Refresh orders</button>
+        </div>
+        <div class="orders-list" id="orders-list"></div>
+      </section>
+
+      <section class="admin-export" id="admin-export" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Export</p>
+            <h2>Updated products.js</h2>
+          </div>
+          <button class="button primary" type="button" id="copy-export">Copy code</button>
+        </div>
+        <textarea id="export-output" rows="18" readonly></textarea>
+      </section>
+    </main>
+
+    <script src="products.js"></script>
+    <script src="admin-real.js"></script>
+  </body>
+</html>

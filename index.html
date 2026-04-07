@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocolate House | Buy Fresh Chocolates Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="announcement" id="announcement">Free delivery on orders above INR 1499 | Homemade batches packed daily</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Chocolate House home">
+      <span class="brand-mark">CH</span>
+      <span>Chocolate House</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#shop">Shop</a>
+      <a href="#gifting">Gifting</a>
+      <a href="#collections">Collections</a>
+      <a href="#kitchen">Home kitchen</a>
+      <a href="#contact">Bulk orders</a>
+    </nav>
+    <button class="cart-button" type="button" data-cart-toggle>
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="shop-hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Online chocolate store</p>
+        <h1 id="hero-title">Homemade chocolates delivered from our home kitchen to your door.</h1>
+        <p>
+          Shop truffles, bars, brownies, bonbons, and gift hampers made in small home batches at
+          Chocolate House.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#shop">Start shopping</a>
+          <a class="button secondary" href="#gifting">Explore gifts</a>
+        </div>
+        <div class="hero-proof" aria-label="Store highlights">
+          <span>4.9 customer rating</span>
+          <span>Gift-ready packing</span>
+          <span>Made fresh daily</span>
+        </div>
+      </div>
+
+      <div class="hero-feature reveal">
+        <span class="product-badge">Best seller</span>
+        <div class="hero-product-image" role="img" aria-label="Assorted chocolate gift box"></div>
+        <div class="hero-product-info">
+          <div>
+            <h2>Signature Celebration Box</h2>
+            <p>Truffles, bonbons, bars, and brownie bites in one premium box.</p>
+          </div>
+          <button class="button primary" type="button" data-add="party-hamper">Add INR 1899</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip reveal-group" aria-label="Shopping benefits">
+      <article>
+        <strong>Freshly packed</strong>
+        <span>Orders are packed after confirmation.</span>
+      </article>
+      <article>
+        <strong>Secure checkout</strong>
+        <span>Confirm your order before payment.</span>
+      </article>
+      <article>
+        <strong>Custom gifting</strong>
+        <span>Boxes for birthdays, weddings, and offices.</span>
+      </article>
+      <article>
+        <strong>Careful delivery</strong>
+        <span>Insulated packing for safer shipping.</span>
+      </article>
+    </section>
+
+    <section class="offer-banner reveal" aria-label="Current offer">
+      <div>
+        <p class="eyebrow" id="offer-eyebrow">Today only</p>
+        <h2 id="offer-title">Free gift note with every celebration box.</h2>
+      </div>
+      <a class="button secondary" href="#shop">Shop the offer</a>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Shop by craving</p>
+          <h2>Chocolate House favorites</h2>
+        </div>
+        <p>Filter the collection, add your treats, and place your order from the cart.</p>
+      </div>
+
+      <div class="category-tabs reveal" aria-label="Product filters">
+        <button class="tab active" type="button" data-filter="all">All</button>
+        <button class="tab" type="button" data-filter="gifts">Gift boxes</button>
+        <button class="tab" type="button" data-filter="bars">Bars</button>
+        <button class="tab" type="button" data-filter="bakery">Bakery</button>
+        <button class="tab" type="button" data-filter="snacks">Snacks</button>
+      </div>
+
+      <div class="shop-tools reveal">
+        <label>
+          Search products
+          <input type="search" id="product-search" placeholder="Search brownies, truffles, gift boxes" />
+        </label>
+      </div>
+
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section collections-section reveal-group" id="collections">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Special collections</p>
+          <h2>Chocolate for every occasion.</h2>
+        </div>
+        <p>Choose from birthday gifts, festival hampers, wedding favors, and office boxes.</p>
+      </div>
+      <div class="collection-grid" id="collection-grid"></div>
+    </section>
+
+    <section class="section editorial-section reveal-group" id="gifting">
+      <div class="editorial-image" role="img" aria-label="Luxury chocolate gift packaging"></div>
+      <div class="editorial-card">
+        <p class="eyebrow">Gifting service</p>
+        <h2>Premium chocolate boxes for every celebration.</h2>
+        <p>
+          Choose curated hampers or request a custom mix with your message card, ribbon color,
+          and delivery notes. We pack every box so it feels special before it is opened.
+        </p>
+        <div class="gift-options">
+          <span>Birthday boxes</span>
+          <span>Wedding favors</span>
+          <span>Festival hampers</span>
+          <span>Corporate orders</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section kitchen-section reveal-group" id="kitchen">
+      <div>
+        <p class="eyebrow">Our home kitchen</p>
+        <h2>Homemade chocolate, made in small batches.</h2>
+        <p>
+          We make every batch from a home kitchen with smooth cocoa, roasted nuts, caramel,
+          fruit, and crisp inclusions for a fresh bite and a clean finish.
+        </p>
+      </div>
+      <div class="process-list">
+        <article>
+          <span>01</span>
+          <strong>Mix</strong>
+          <p>Cocoa, fillings, nuts, and flavors are prepared in small home batches.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>Finish</strong>
+          <p>Bars, bonbons, truffles, and brownies are cut, filled, and decorated.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>Pack</strong>
+          <p>Every order is checked, boxed, sealed, and prepared for delivery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reviews-section reveal-group" aria-label="Customer reviews">
+      <article>
+        <div class="review-photo review-photo-one" aria-hidden="true"></div>
+        <p class="rating">★★★★★</p>
+        <strong>"The hamper looked premium and tasted even better."</strong>
+        <span>Priya M.</span>
+      </article>
+      <article>
+        <div class="review-photo review-photo-two" aria-hidden="true"></div>
+        <p class="rating">★★★★★</p>
+        <strong>"Fresh brownies, neat packing, and fast confirmation."</strong>
+        <span>Arjun S.</span>
+      </article>
+      <article>
+        <div class="review-photo review-photo-three" aria-hidden="true"></div>
+        <p class="rating">★★★★★</p>
+        <strong>"Perfect for office gifting. The custom note was a nice touch."</strong>
+        <span>Neha R.</span>
+      </article>
+    </section>
+
+    <section class="section faq-section reveal-group" id="faq">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Quick answers</p>
+          <h2>Before you order.</h2>
+        </div>
+        <p>Simple answers for homemade chocolate orders, storage, customization, and delivery.</p>
+      </div>
+      <details open>
+        <summary>Are the chocolates made at home?</summary>
+        <p>Yes. Chocolate House is a home-selling chocolate business and every order is prepared in small batches.</p>
+      </details>
+      <details>
+        <summary>Can I customize a box?</summary>
+        <p>Yes. You can choose box size, chocolate type, gift wrap, and add a gift note during checkout.</p>
+      </details>
+      <details>
+        <summary>How do I confirm payment?</summary>
+        <p>Send your order on WhatsApp from checkout. We confirm delivery charges and payment before preparing delivery.
+        </p>
+      </details>
+      <details>
+        <summary>How should chocolates be stored?</summary>
+        <p>Keep them in a cool place away from sunlight. Refrigerate only if your room is warm.</p>
+      </details>
+      <details>
+        <summary>Do you take bulk orders?</summary>
+        <p>Yes. Use the bulk order form for birthdays, weddings, festival hampers, and corporate gifting.</p>
+      </details>
+    </section>
+
+    <section class="section contact-section reveal-group" id="contact">
+      <div>
+        <p class="eyebrow">Bulk and custom orders</p>
+        <h2>Plan a sweeter order.</h2>
+        <p>
+          Tell us your date, quantity, budget, and packaging preference. We will help you choose
+          the right chocolate mix.
+        </p>
+      </div>
+      <form class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" />
+        </label>
+        <label>
+          Phone or email
+          <input type="text" name="contact" placeholder="How should we reach you?" />
+        </label>
+        <label>
+          Order details
+          <textarea name="message" rows="4" placeholder="Quantity, occasion, delivery date"></textarea>
+        </label>
+        <button class="button primary" type="submit">Send inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">Your order</p>
+        <h2>Cart</h2>
+      </div>
+      <button class="icon-button" type="button" data-cart-toggle aria-label="Close cart">x</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty">Your cart is waiting for chocolate.</div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">INR 0</strong>
+      </div>
+      <a class="button primary full" href="checkout.html" id="checkout-link">Checkout</a>
+    </div>
+  </aside>
+  <div class="overlay" data-cart-toggle></div>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand footer-brand" href="#top" aria-label="Chocolate House home">
+        <span class="brand-mark">CH</span>
+        <span>Chocolate House</span>
+      </a>
+      <p>Homemade chocolates, gift boxes, and celebration hampers.</p>
+    </div>
+    <div>
+      <strong>Shop</strong>
+      <a href="#shop">Best sellers</a>
+      <a href="#gifting">Gift boxes</a>
+      <a href="#contact">Bulk orders</a>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <span>orders@chocolatehouse.com</span>
+      <span>+91 98765 43210</span>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

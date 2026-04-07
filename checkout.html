@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Chocolate House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">Complete your Chocolate House order</div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Chocolate House home">
+        <span class="brand-mark">CH</span>
+        <span>Chocolate House</span>
+      </a>
+      <nav class="nav-links" aria-label="Checkout navigation">
+        <a href="index.html">Continue shopping</a>
+      </nav>
+      <a class="cart-button" href="index.html">Back to shop</a>
+    </header>
+
+    <main class="checkout-page">
+      <section class="checkout-heading reveal">
+        <p class="eyebrow">Checkout</p>
+        <h1>Confirm your chocolate order.</h1>
+        <p>Review your products, add delivery details, and choose how you want us to confirm payment.</p>
+      </section>
+
+      <section class="checkout-layout">
+        <aside class="order-summary reveal" aria-label="Order summary">
+          <div class="summary-header">
+            <div>
+              <p class="eyebrow">Your cart</p>
+              <h2>Order summary</h2>
+            </div>
+            <a href="index.html">Edit cart</a>
+          </div>
+          <div class="summary-items" id="checkout-items"></div>
+          <div class="cart-empty checkout-empty" id="checkout-empty">
+            Your cart is empty. Add chocolates before checkout.
+          </div>
+          <div class="summary-totals">
+            <div>
+              <span>Products total</span>
+              <strong id="checkout-subtotal">INR 0</strong>
+            </div>
+            <div>
+              <span>Delivery</span>
+              <strong id="checkout-delivery">Enter pincode</strong>
+            </div>
+            <div class="grand-total">
+              <span>Order total</span>
+              <strong id="checkout-total">INR 0</strong>
+            </div>
+          </div>
+        </aside>
+
+        <form class="checkout-details reveal" id="checkout-form">
+          <div>
+            <p class="eyebrow">Customer details</p>
+            <h2>Delivery and payment</h2>
+          </div>
+
+          <div class="form-section">
+            <h3>Contact details</h3>
+            <div class="form-row">
+              <label>
+                Full name
+                <input type="text" name="customerName" placeholder="Your full name" required />
+              </label>
+              <label>
+                Phone number
+                <input type="tel" name="phone" placeholder="Mobile number" required />
+              </label>
+            </div>
+            <label>
+              Email address
+              <input type="email" name="email" placeholder="Email for order updates" />
+            </label>
+          </div>
+
+          <div class="form-section">
+            <h3>Delivery address</h3>
+            <label>
+              Full address
+              <textarea name="address" rows="4" placeholder="House number, street, area" required></textarea>
+            </label>
+            <div class="form-row">
+              <label>
+                City
+                <input type="text" name="city" placeholder="City" required />
+              </label>
+              <label>
+                Pincode
+                <input type="text" name="pincode" id="pincode" placeholder="Pincode" required />
+              </label>
+            </div>
+            <div class="delivery-check" id="delivery-check">Enter pincode to check delivery availability.</div>
+            <div class="form-row">
+              <label>
+                Preferred delivery date
+                <input type="date" name="deliveryDate" />
+              </label>
+              <label>
+                Delivery time
+                <select name="deliveryTime">
+                  <option value="">Any time</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Payment and notes</h3>
+            <div class="form-row">
+              <label>
+                Chocolate preference
+                <select name="chocolatePreference">
+                  <option>Mixed selection</option>
+                  <option>Milk chocolate</option>
+                  <option>Dark chocolate</option>
+                  <option>White chocolate</option>
+                </select>
+              </label>
+              <label>
+                Gift packing
+                <select name="giftPacking">
+                  <option>No gift packing</option>
+                  <option>Gift wrap</option>
+                  <option>Ribbon and message card</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Payment preference
+              <select name="paymentPreference" required>
+                <option value="">Choose payment method</option>
+                <option>UPI after confirmation</option>
+                <option>Cash on delivery</option>
+                <option>Card payment link</option>
+                <option>Bank transfer for bulk order</option>
+              </select>
+            </label>
+            <label>
+              Gift note or delivery instructions
+              <textarea name="orderNotes" rows="3" placeholder="Message, custom box request, or delivery notes"></textarea>
+            </label>
+          </div>
+
+          <button class="button primary full whatsapp-button" type="submit">Send order on WhatsApp</button>
+          <p class="checkout-note">
+            This opens WhatsApp with your full order details so Chocolate House can confirm delivery and payment.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="products.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>
